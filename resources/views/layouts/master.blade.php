@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{{asset('css/kmutnb.css')}}">
 </head>
 
-<body style ="background-image: url({{asset('bg/bg-home3.jpg')}}); ">
+<body>
     <script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
     <script src="{{asset('js/Chart.min.js')}}"></script>
     <script src="{{asset('js/angular.min.js')}}"></script>

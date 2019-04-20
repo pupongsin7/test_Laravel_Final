@@ -24,7 +24,7 @@
         <span style="float:right;"><h6>แสดงข้อมูลจำนวน {{count($products)}} รายการ</h6></span>
     
     
-    <table class="table table-bordered ">
+    <table class="table table-bordered table-striped table-hover">
         <thead>
             <th>รูปภาพ</th>
             <th>รหัส</th>
@@ -37,12 +37,12 @@
         <tbody>
             @foreach ($products as $item)
             <tr>
-                <td> <img src="{{ $item->image_url }}" width="50px"></td>
+                <td> <img src="{{ asset($item->image_url) }}" width="50px"></td>
                 <td>{{$item->code}}</td>
                 <td>{{$item->name}}</td>
                 <td>{{$item->category->name}}</td>
                 <td>{{$item->stock_qty}}</td>
-                <td>{{number_format($item->price,2)}}</td>
+                <td align="right">{{number_format($item->price,2)}}</td>
                 <td>
                     <a href="{{URL::to('product/edit/'.$item->id)}}" class="btn btn-info"><i class="fa fa-edit"></i> แก้ไข</a>
                     <a href="#" class="btn btn-delete btn-danger" id-delete="{{ $item->id }}">
